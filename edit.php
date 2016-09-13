@@ -8,3 +8,5 @@ require_once('models/blogmodel.php');
 if(empty($_POST)) {
     die('Not allowed accsess!');
 }
+
+$blogmodel = new Blogmodel();
