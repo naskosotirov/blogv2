@@ -56,5 +56,45 @@ class Blogmodel {
 
         return $this->_result;        
     }
+
+    public function updatePost($data) {
+        if(!is_numeric($data['post_id'])) {
+            return false;
+        }
+
+        $data['post_text'] = filter_var($data['post_text'], FILTER_SANITIZE_STRING);
+
+        foreach($data as $key => $data_value) {
+            $data[$key] = $this->_db->RealEscapreSting($data_value);
+        }
+
+        $return_id = false;
+        
+        $this->_result = $this->_db->insertUpdateDeleteQuery("UPDATE `posts` SET `post_title`='{$data['post_title']}', `post_author`='{$data['post_author']}', `post_text`='{$data['post_text']}' WHERE `post_id`=".$data['post_id']);
+
+        if($this->_result) {
+            $return_id = $data['post_id'];
+        }
+
+        return $return_id;
+    }
+
+    public function deletePost($id) {
+        if(!is_numeric($id)) {
+            return false;
+        }
+        
+        $id = $this->_db->RealEscapreSting($id);
+
+        $return_id = false;
+    
+        $this->_result = $this->_db->insertUpdateDeleteQuery("DELETE FROM `posts` WHERE `post_id`=".$id);
+
+        if($this->_result) {
+            $return_id = $id;
+        }
+
+        return $return_id;
+    }
 }
 ?>

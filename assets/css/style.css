@@ -152,6 +152,11 @@ button {
     padding-top: 10px;
 }
 
+.edit-post {
+    float: none;
+    padding-left: 0;
+}
+
 @media (max-width: 767px) {
     .col-md-8 {
         width: 100%;

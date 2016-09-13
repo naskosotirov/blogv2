@@ -60,3 +60,13 @@ var createNewPost = function(data) {
 var editPost = function (id) {
     window.location = "edit.php?id="+id;
 }
+
+var daletePost = function (id) {
+    if (confirm("Сигурни ли сте, че искате да изтриете този пост?") == true) {
+        window.location = "delete.php?id="+id;
+    }
+}
+
+var submitEditForm = function() {
+    document.getElementById("postFormEdit").submit();
+}

@@ -22,7 +22,7 @@
                 <div class="post-text"><?=$post['post_text']?></div>
                 <div class="post-btns">
                     <button class="left-btn" type="button" onclick="javscript:editPost(<?=$post['post_id'];?>);">Редактиране</button>
-                    <button class="right-btn" type="button" onclick="javscript:deletePost(<?=$post['post_id'];?>);">Изтриване</button>
+                    <button class="right-btn" type="button" onclick="javscript:daletePost(<?=$post['post_id'];?>);">Изтриване</button>
                 </div>
             <?php if($key==$elephant) {?>
                 <div class="el-container">
