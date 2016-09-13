@@ -1,0 +1,178 @@
+@font-face {
+	font-family: "Roboto-Regular";
+	src: url("roboto/Roboto-Regular.ttf")format('truetype');
+}
+
+body {
+	font-family: "Roboto-Regular", Arial, sans-serif;
+	background-color: #f7f7f9;
+	color: #000000;
+	font-size: 14px;
+}
+
+h2 {    
+    font-size: 28px;
+    font-weight: bold;
+}
+
+section > h2 {
+    display: table;
+    margin: 0 auto;
+    padding: 15px 0;
+    text-align: center;
+}
+
+h3 {
+    font-size: 22px;
+    font-weight: bold;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.form-container > h3{
+    text-align: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1600px;
+    display: table;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.clearfix:before, .clearfix:after {
+    display: table;
+    content: " ";
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clear {
+    clear: both;
+}
+
+.col-md-8, .col-md-4 {
+    float: left;
+}
+
+.col-md-8 {
+    width: 66.66%;
+}
+
+.col-md-4 {
+    width: 33.33%;
+}
+
+.post-container {
+    padding: 15px;
+    background-color: yellow;
+    border-bottom: 1px solid black;
+}
+
+.pink {
+    background-color: pink;
+}
+
+.post-container .author, .post-container .post-date {
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+.post-container .author {
+    float: left;
+}
+
+.post-container .post-date {
+    float: right;
+}
+
+.post-container .post-text {
+    text-align: justify;
+}
+
+.form-container {
+    padding-top: 15px;
+    padding-left: 15px;
+    display: table;
+    margin: 0 auto;
+    float: right;
+}
+
+.form-container div {
+    padding-bottom: 15px; 
+}
+
+.form-container div label {
+    float: left;
+    display: block;
+}
+
+.form-container div input, .form-container div select, .form-container div textarea{
+    float: right;
+    display: block;
+    width: 60%;
+}
+
+.form-container div .left-btn {
+    float: left;
+}
+
+.form-container div .right-btn {
+    float: right;
+}
+
+.el-container {
+    position: relative;
+}
+
+.el-container .el-first {
+    position: absolute;
+}
+
+.el-container .el-second {
+    background-color: #f7f7f9;
+    position: absolute;
+    top: 0px;
+    right: -30px;
+    z-index: 1000;
+    border: 1px solid black;
+}
+
+.el-container .el-second img {
+    width: 100px;
+}
+
+.post-btns {
+    padding-top: 10px;
+}
+
+@media (max-width: 767px) {
+    .col-md-8 {
+        width: 100%;
+    }
+
+    .col-md-4 {
+        width: 100%;
+    }
+    .form-container {
+        float: none;
+        padding: 15px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+    .form-container div input, .form-container div select, .form-container div textarea{
+        width: 50%;
+    }
+}
+@media (max-width: 330px) {
+    .form-container div input, .form-container div select, .form-container div textarea{
+        width: 55%;
+    }
+}
