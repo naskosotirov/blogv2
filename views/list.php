@@ -11,7 +11,8 @@
 <body>
     <div class="container clearfix">
         <section class="col-md-8">
-        <?php if(!empty($author_top)) : ?><h2>Най-дългият пост е с автор: <?=$author_top[0]['author_name']?></h2><?php endif;?>
+        <?php if(!empty($author_top)) : ?><h2 id="longestPost">Най-дългият пост е с автор: <?=$author_top[0]['author_name']?></h2><?php endif;?>
+        <?php if(empty($blog_data)) : ?><h2 id="emptyDataMsg">Няма налични постове!</h2><?php endif;?>
         <?php $elephant = rand(0, (count($blog_data) - 1));?>
         <?php foreach($blog_data as $key => $post) :?>
             <article class="post-container <?= ($key==0)? 'pink' : '';?>">

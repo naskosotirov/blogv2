@@ -9,7 +9,5 @@ $blog_data = $blogmodel->getBlogData();
 $author_data = $blogmodel->getAuthors();
 $author_top = $blogmodel->getLongestPostAuthor();
 
-if(!empty($blog_data)) {
-    require_once('views/list.php');
-}
+require_once('views/list.php');
 ?>
