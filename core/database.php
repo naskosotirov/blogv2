@@ -4,8 +4,8 @@ class Database {
 	private $_connection;
 	private static $_instance;
 	private $_host = "localhost";
-	private $_username = "root";
-	private $_password = "lpassword654";
+	private $_username = "someuser";
+	private $_password = "somepassword";
 	private $_database = "blogv2";
 	
     /*
